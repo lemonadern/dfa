@@ -2,11 +2,11 @@ use core::hash::Hash;
 use std::collections::HashMap;
 
 #[derive(PartialEq, Eq, Hash)]
-struct Pair<S, T>(S, T);
+pub struct Pair<S, T>(pub S, pub T);
 type TransitionMap<S, T> = HashMap<Pair<S, T>, S>;
 
 #[allow(dead_code)]
-struct Automata<S, T>
+pub struct Automata<S, T>
 where
     S: Eq + Hash,
     T: Eq + Hash,
